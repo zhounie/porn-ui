@@ -15,11 +15,23 @@ module.exports = {
                 test: /\.vue$/,
                 loader: 'vue-loader'
             }, {
+                test: /\.js$/,
+                loader: 'babel-loader',
+                options: {
+                    sourceMap: true
+                },
+                exclude: /node_modules/
+            },{
                 test: /\.css$/,
-                use: [
-                    'style-loader',
-                    { loader: 'css-loader', options: { importLoaders: 1 } },
-                    'postcss-loader'
+                loaders: [
+                    {
+                        loader: 'style-loader',
+                    }, {
+                        loader: 'css-loader',
+                        options: { importLoaders: 1 }
+                    }, {
+                        loader: '\'autoprefixer-loader\''
+                    }
                 ]
             }, {
                 test: /\.less$/,

@@ -1,19 +1,53 @@
 {
   "name": "porn-ui",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "",
-  "main": "index.js",
+  "main": "dist/pornUI.js",
   "scripts": {
-    "dev": "webpack-dev-server --config build/webpack.dev.js"
+    "dev": "webpack-dev-server --config build/webpack.dev.js",
+    "dist:style": "gulp --gulpfile build/build-style.js",
+    "dist:dev": "webpack --config build/webpack.dist.dev.js",
+    "dist:prod": "webpack --config  build/webpack.dist.prod.js",
+    "dist": "npm run dist:style && npm run dist:dev && npm run dist:prod"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Aresn",
+  "license": "MIT",
+  "keywords": [
+    "PornUI"
+  ],
+  "files": [
+    "dist",
+    "src",
+    "types"
+  ],
+  "typings": "types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhounie/porn-ui"
+  },
   "devDependencies": {
     "@babel/core": "^7.11.0",
     "@babel/preset-env": "^7.11.0",
+    "autoprefixer-loader": "^3.2.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-loader": "^8.1.0",
+    "babel-plugin-dynamic-import-node": "^2.3.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es5-property-mutators": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "babel-runtime": "^6.26.0",
+    "compression-webpack-plugin": "^4.0.0",
     "css-loader": "^4.2.0",
     "friendly-errors-webpack-plugin": "^1.7.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-less": "^4.0.1",
+    "gulp-rename": "^2.0.0",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
     "less-loader": "^6.2.0",
@@ -21,6 +55,7 @@
     "style-loader": "^1.2.1",
     "ts-loader": "^8.0.2",
     "typescript": "^3.9.7",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "url-loader": "^4.1.0",
     "vue": "^2.6.11",
     "vue-loader": "^15.9.3",
@@ -31,5 +66,8 @@
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^5.1.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "peerDependencies": {
+    "vue": "^2.5.2"
+  }
 }

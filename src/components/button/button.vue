@@ -8,7 +8,14 @@
 export default {
     name: 'PButton',
     props: {
-
+        size: {
+            type: String,
+            default: 'default'
+        },
+        type: {
+            type: String,
+            default: 'default'
+        }
     }
 }
 </script>
