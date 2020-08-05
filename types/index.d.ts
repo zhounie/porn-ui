@@ -1,10 +1,6 @@
-// import iPornUI from './porn-ui'
 
-// export default iPornUI
+import pornUI from './porn-ui'
 
-// export * from './components'
-
-export * from './porn-ui'
-
-import * as PornUI from './porn-ui'
-export default PornUI
+export default pornUI
+export as namespace pornUI
+export * from './porn-ui.components'

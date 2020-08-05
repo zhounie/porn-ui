@@ -1,6 +1,6 @@
 {
   "name": "porn-ui",
-  "version": "1.0.3",
+  "version": "1.0.11",
   "description": "",
   "main": "dist/pornUI.js",
   "scripts": {
@@ -40,6 +40,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-3": "^6.24.1",
     "babel-runtime": "^6.26.0",
+    "clean-webpack-plugin": "^3.0.0",
     "compression-webpack-plugin": "^4.0.0",
     "css-loader": "^4.2.0",
     "friendly-errors-webpack-plugin": "^1.7.0",

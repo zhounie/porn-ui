@@ -2,7 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const pkg = require('../package.json')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
-
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 const resolve = (dir) => {
     return path.join(__dirname, '..', dir)
@@ -58,6 +58,7 @@ module.exports = {
     },
     plugins: [
         new VueLoaderPlugin(),
+        new CleanWebpackPlugin(),
         new webpack.optimize.ModuleConcatenationPlugin(),
         new webpack.DefinePlugin({
             'process.env.VERSION': `'${pkg.version}'` // 可在编译时配置的全局常量
